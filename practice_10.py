@@ -1,5 +1,7 @@
 #机器学习--支持向量机SVM
 from sklearn import svm,datasets     #svm表示支持向量机   datasets表示sklearn自带的数据集
+from string import *
+from numpy import *
 
 class Dataset(object):     #创造一个dataset的类，这里引用sklearn自带的数据集
 	"""docstring for Dataset"""
@@ -20,6 +22,7 @@ class Dataset(object):     #创造一个dataset的类，这里引用sklearn自�
 		self.download_data()
 		x = self.downloaded_data.data
 		y = self.downloaded_data.target
+		print(type(x))
 		print('\nOriginal data looks like this: \n', x)
 		print('\nlabels looks like this: \n', y)
 		return x,y
