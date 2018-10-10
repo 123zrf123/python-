@@ -130,8 +130,8 @@ def send_mail(to_list,sub,content):      #to_list:收件人  sub:主题   conten
 	fp = open('roc_auc曲线分析.png', 'rb')
 	msgImage = MIMEImage(fp.read())    #读入图片
 	fp.close()
-	msgImage.add_header('Content-ID', '<image1>')
-	msgImage.add_header("Content-Disposition", "attachment", filename=("gbk", "", "roc_auc曲线分析.png"))
+	msgImage.add_header('Content-ID', '<image1>')   #定义图片 ID，在 HTML 文本中引用
+	msgImage.add_header("Content-Disposition", "attachment", filename=("gbk", "", "roc_auc曲线分析.png"))   #显示附件中的名字
 	msg.attach(msgImage)    #添加图片
 	try:
 		s.sendmail(sender,to_list,msg.as_string())  #利用该函数发送邮件
