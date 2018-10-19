@@ -18,3 +18,4 @@ just practice
 16.发送邮件
 17.获取各省邮政编码初步的爬虫
 18.多线程爬取网站
+19.爬虫1：获取http://hz.17zwd.com/index.htm信息
